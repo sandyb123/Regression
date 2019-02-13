@@ -1,0 +1,74 @@
+07/02/2019 18:19:09.414 [main] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {s}->https://development-abh-anastasiabeverlyhills.demandware.net:443
+07/02/2019 18:19:09.440 [main] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to development-abh-anastasiabeverlyhills.demandware.net:443
+07/02/2019 18:19:10.114 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+07/02/2019 18:19:10.116 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+07/02/2019 18:19:10.120 [main] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+07/02/2019 18:19:10.121 [main] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+07/02/2019 18:19:10.121 [main] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+07/02/2019 18:19:10.122 [main] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /s/AnastasiaUS/dw/shop/v18_8/custom_objects/MarketingCloudDataExportStatus/AnastasiaUS_purchaseDetails?client_id=0531126e-272d-462a-b967-e25abdf45bbc HTTP/1.1
+07/02/2019 18:19:10.122 [main] DEBUG org.apache.http.wire -  >> "GET /s/AnastasiaUS/dw/shop/v18_8/custom_objects/MarketingCloudDataExportStatus/AnastasiaUS_purchaseDetails?client_id=0531126e-272d-462a-b967-e25abdf45bbc HTTP/1.1[\r][\n]"
+07/02/2019 18:19:10.123 [main] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+07/02/2019 18:19:10.124 [main] DEBUG org.apache.http.wire -  >> "Origin: https://www.dummyapi.com[\r][\n]"
+07/02/2019 18:19:10.124 [main] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+07/02/2019 18:19:10.124 [main] DEBUG org.apache.http.wire -  >> "Host: development-abh-anastasiabeverlyhills.demandware.net[\r][\n]"
+07/02/2019 18:19:10.124 [main] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+07/02/2019 18:19:10.124 [main] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_45)[\r][\n]"
+07/02/2019 18:19:10.124 [main] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+07/02/2019 18:19:10.124 [main] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+07/02/2019 18:19:10.124 [main] DEBUG org.apache.http.headers - >> GET /s/AnastasiaUS/dw/shop/v18_8/custom_objects/MarketingCloudDataExportStatus/AnastasiaUS_purchaseDetails?client_id=0531126e-272d-462a-b967-e25abdf45bbc HTTP/1.1
+07/02/2019 18:19:10.124 [main] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
+07/02/2019 18:19:10.125 [main] DEBUG org.apache.http.headers - >> Origin: https://www.dummyapi.com
+07/02/2019 18:19:10.125 [main] DEBUG org.apache.http.headers - >> Accept: */*
+07/02/2019 18:19:10.125 [main] DEBUG org.apache.http.headers - >> Host: development-abh-anastasiabeverlyhills.demandware.net
+07/02/2019 18:19:10.125 [main] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+07/02/2019 18:19:10.125 [main] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_45)
+07/02/2019 18:19:10.125 [main] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+07/02/2019 18:19:11.570 [main] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+07/02/2019 18:19:11.580 [main] DEBUG org.apache.http.wire -  << "Date: Thu, 07 Feb 2019 12:49:11 GMT[\r][\n]"
+07/02/2019 18:19:11.581 [main] DEBUG org.apache.http.wire -  << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+07/02/2019 18:19:11.581 [main] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+07/02/2019 18:19:11.581 [main] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+07/02/2019 18:19:11.581 [main] DEBUG org.apache.http.wire -  << "Set-Cookie: __cfduid=d018e07a0d713c8af6aa9c52b2749a4e51549543750; expires=Fri, 07-Feb-20 12:49:10 GMT; path=/; domain=.demandware.net; HttpOnly[\r][\n]"
+07/02/2019 18:19:11.583 [main] DEBUG org.apache.http.wire -  << "x-dw-request-base-id: kLdRfEcpXFwBAAB_[\r][\n]"
+07/02/2019 18:19:11.583 [main] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Origin: https://www.dummyapi.com[\r][\n]"
+07/02/2019 18:19:11.583 [main] DEBUG org.apache.http.wire -  << "Access-Control-Expose-Headers: etag,location,x-dw-version-status,x-dw-resource-state,authorization,x-dw-request-base-id[\r][\n]"
+07/02/2019 18:19:11.584 [main] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Credentials: true[\r][\n]"
+07/02/2019 18:19:11.584 [main] DEBUG org.apache.http.wire -  << "Allow: GET,HEAD,OPTIONS[\r][\n]"
+07/02/2019 18:19:11.584 [main] DEBUG org.apache.http.wire -  << "x-dw-version-status: deprecated[\r][\n]"
+07/02/2019 18:19:11.584 [main] DEBUG org.apache.http.wire -  << "Cache-Control: max-age=60,must-revalidate[\r][\n]"
+07/02/2019 18:19:11.584 [main] DEBUG org.apache.http.wire -  << "Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"[\r][\n]"
+07/02/2019 18:19:11.584 [main] DEBUG org.apache.http.wire -  << "Server: cloudflare[\r][\n]"
+07/02/2019 18:19:11.585 [main] DEBUG org.apache.http.wire -  << "CF-RAY: 4a55f996f90a8a6d-BOM[\r][\n]"
+07/02/2019 18:19:11.585 [main] DEBUG org.apache.http.wire -  << "Content-Encoding: gzip[\r][\n]"
+07/02/2019 18:19:11.585 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+07/02/2019 18:19:11.586 [main] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+07/02/2019 18:19:11.586 [main] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+07/02/2019 18:19:11.586 [main] DEBUG org.apache.http.headers - << Date: Thu, 07 Feb 2019 12:49:11 GMT
+07/02/2019 18:19:11.587 [main] DEBUG org.apache.http.headers - << Content-Type: application/json;charset=UTF-8
+07/02/2019 18:19:11.587 [main] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+07/02/2019 18:19:11.587 [main] DEBUG org.apache.http.headers - << Connection: keep-alive
+07/02/2019 18:19:11.587 [main] DEBUG org.apache.http.headers - << Set-Cookie: __cfduid=d018e07a0d713c8af6aa9c52b2749a4e51549543750; expires=Fri, 07-Feb-20 12:49:10 GMT; path=/; domain=.demandware.net; HttpOnly
+07/02/2019 18:19:11.587 [main] DEBUG org.apache.http.headers - << x-dw-request-base-id: kLdRfEcpXFwBAAB_
+07/02/2019 18:19:11.587 [main] DEBUG org.apache.http.headers - << Access-Control-Allow-Origin: https://www.dummyapi.com
+07/02/2019 18:19:11.587 [main] DEBUG org.apache.http.headers - << Access-Control-Expose-Headers: etag,location,x-dw-version-status,x-dw-resource-state,authorization,x-dw-request-base-id
+07/02/2019 18:19:11.588 [main] DEBUG org.apache.http.headers - << Access-Control-Allow-Credentials: true
+07/02/2019 18:19:11.588 [main] DEBUG org.apache.http.headers - << Allow: GET,HEAD,OPTIONS
+07/02/2019 18:19:11.588 [main] DEBUG org.apache.http.headers - << x-dw-version-status: deprecated
+07/02/2019 18:19:11.588 [main] DEBUG org.apache.http.headers - << Cache-Control: max-age=60,must-revalidate
+07/02/2019 18:19:11.588 [main] DEBUG org.apache.http.headers - << Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+07/02/2019 18:19:11.588 [main] DEBUG org.apache.http.headers - << Server: cloudflare
+07/02/2019 18:19:11.588 [main] DEBUG org.apache.http.headers - << CF-RAY: 4a55f996f90a8a6d-BOM
+07/02/2019 18:19:11.588 [main] DEBUG org.apache.http.headers - << Content-Encoding: gzip
+07/02/2019 18:19:11.597 [main] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+07/02/2019 18:19:11.625 [main] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json;charset=UTF-8
+07/02/2019 18:19:11.626 [main] DEBUG org.apache.http.wire -  << "9f[\r][\n]"
+07/02/2019 18:19:11.626 [main] DEBUG org.apache.http.wire -  << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3]4[0xcb][0xbd][\n]"
+07/02/2019 18:19:11.627 [main] DEBUG org.apache.http.wire -  << "[0xc2]0[0x14][0x86][0xe1]{[0xf9][0xe6][0xb4]$[0xa1]`[0xcd]j[0x1d]:[0xb8][0xa8][0x93]K[0x88][0xf5] [0xb5]?[0x9][0xc9][0x89]X[0xc4]{[0x17],[0xae]/[0xcf][0xfb][0x86]}[0xc2]@[0xd5]e[\r][0x1][0xcb]K [0x18]t9[0xb1][0x9f][0xac][0xbf]>[0xa8]c[0x8][0xc][0xb4][0xd8][0x10]}[0xa0][0xc8][0xb][0xc]R[0xcf][0xd4]6[0x96]^[0xc1]Gn[0x1b][0x8][0xac][0xf2][0xbf][0x1f]\[0x1c][0x88][0xfb][0xf9][0xbe][0x1b]}[0xbe]5[0x8e][0xdd][0xfe]GO[0xec]8'[0x8]tvt[0x89][0xd7]x[0xcc]3[0xc][0xb4]T[0xdb]B[0xea]Bn[0xce]J[0x9b]J[0x1b][0xa9][0xca]J[0xd5][0x17]|[0xbe][0x0][0x0][0x0][0xff][0xff][0x3][0x0]?[0xd1][0x4][0xcd][0xa2][0x0][0x0][0x0]"
+07/02/2019 18:19:11.627 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+07/02/2019 18:19:11.627 [main] DEBUG org.apache.http.wire -  << "0[\r][\n]"
+07/02/2019 18:19:11.628 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+07/02/2019 18:19:11.628 [main] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+07/02/2019 18:19:11.699 [main] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5fa05212
+07/02/2019 18:19:11.699 [main] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+07/02/2019 18:19:11.703 [main] INFO  Testcase.RegressionTest - Contents fetched successfully
+07/02/2019 18:19:11.703 [main] INFO  Testcase.RegressionTest - {"_v":"18.8","_type":"custom_object","key_property":"siteID_exportID","object_type":"MarketingCloudDataExportStatus","c_lastExportRun":"2019-02-07T12:42:01.418Z"}

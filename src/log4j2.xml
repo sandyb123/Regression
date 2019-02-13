@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Properties>
+		<Property name="basePath">./logs</Property>
+	</Properties>
+  	<Appenders>
+  		<RollingFile name="File" filename="${basePath}/activity.log"
+  					 filePattern="${basePath}/activity-%d{yyyy-MM-dd}-%i.log">
+  			<PatternLayout pattern="%d{dd/MM/yyyy HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+ 	 	<Policies>
+            <SizeBasedTriggeringPolicy size="10MB"/>
+            <OnStartupTriggeringPolicy />
+        </Policies>
+        <DefaultRolloverStrategy max="100"/>
+ 	 	</RollingFile>
+  	</Appenders>
+ <Loggers>
+
+	<Root level="trace">
+		<AppenderRef ref="File" />
+	</Root>
+</Loggers>
+</Configuration>
