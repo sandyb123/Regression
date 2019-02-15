@@ -23,6 +23,7 @@ public class Home_CLP_PLP_Search extends BaseTest {
 	public static void contentMethod() throws IOException{
 		
 		BaseTest.Home_CLP_PLP_Search_data();
+		System.out.println("contentMethod() start");
 		response=
 				given()
 				.queryParam("client_id", "0531126e-272d-462a-b967-e25abdf45bbc")
@@ -50,6 +51,7 @@ public class Home_CLP_PLP_Search extends BaseTest {
 			log.error(responseString);
 		}
 		
+		System.out.println("contentMethod() end");
 		
 	}
 }
