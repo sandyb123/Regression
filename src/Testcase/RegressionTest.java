@@ -28,5 +28,6 @@ public class RegressionTest extends BaseTest {
 	@Test
 	public void regression_Home_CLP_PLP_Search() throws IOException{
 	Home_CLP_PLP_Search.contentMethod();
+	System.out.println("aaa");
 }
 }
