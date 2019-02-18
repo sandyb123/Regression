@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6327" started-at="2019-02-13T11:15:36Z" finished-at="2019-02-13T11:15:43Z">
+  <suite name="Default suite" duration-ms="13861" started-at="2019-02-18T10:32:19Z" finished-at="2019-02-18T10:32:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6327" started-at="2019-02-13T11:15:36Z" finished-at="2019-02-13T11:15:43Z">
+    <test name="Default test" duration-ms="13861" started-at="2019-02-18T10:32:19Z" finished-at="2019-02-18T10:32:33Z">
       <class name="Testcase.RegressionTest">
-        <test-method status="PASS" signature="getExcel()[pri:0, instance:Testcase.RegressionTest@1bd4fdd]" name="getExcel" is-config="true" duration-ms="13" started-at="2019-02-13T11:15:36Z" finished-at="2019-02-13T11:15:36Z">
+        <test-method status="PASS" signature="getExcel()[pri:0, instance:Testcase.RegressionTest@74f0ea28]" name="getExcel" is-config="true" duration-ms="28" started-at="2019-02-18T10:32:19Z" finished-at="2019-02-18T10:32:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getExcel -->
-        <test-method status="PASS" signature="hitClientResource()[pri:0, instance:Testcase.RegressionTest@1bd4fdd]" name="hitClientResource" is-config="true" duration-ms="436" started-at="2019-02-13T11:15:36Z" finished-at="2019-02-13T11:15:37Z">
+        <test-method status="PASS" signature="hitClientResource()[pri:0, instance:Testcase.RegressionTest@74f0ea28]" name="hitClientResource" is-config="true" duration-ms="1751" started-at="2019-02-18T10:32:19Z" finished-at="2019-02-18T10:32:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- hitClientResource -->
-        <test-method status="PASS" signature="regression_Home_CLP_PLP_Search()[pri:0, instance:Testcase.RegressionTest@1bd4fdd]" name="regression_Home_CLP_PLP_Search" duration-ms="5855" started-at="2019-02-13T11:15:37Z" finished-at="2019-02-13T11:15:43Z">
+        <test-method status="PASS" signature="regression_Home_CLP_PLP_Search()[pri:0, instance:Testcase.RegressionTest@74f0ea28]" name="regression_Home_CLP_PLP_Search" duration-ms="12002" started-at="2019-02-18T10:32:21Z" finished-at="2019-02-18T10:32:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regression_Home_CLP_PLP_Search -->
