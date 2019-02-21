@@ -1,9 +1,11 @@
 package functaionalities;
 
 import static io.restassured.RestAssured.given;
+import static org.testng.Assert.fail;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -42,6 +44,7 @@ public class Home_CLP_PLP_Search extends BaseTest {
 			System.out.println(responseString);
 			log.info("Contents fetched successfully");
 			log.info(responseString);
+			Reporter.log(responseString,true);
 		}
 		
 		else{
@@ -51,9 +54,49 @@ public class Home_CLP_PLP_Search extends BaseTest {
 			log.error(responseString);
 		}
 		
-		System.out.println("contentMethod() end");
-		System.out.println("bbb");
-		System.out.println("ccc");
+		
 		
 	}
+	
+	public static void categoryLists() throws IOException {
+		BaseTest.Home_CLP_PLP_Search_data();
+		System.out.println("categoryLists start");
+		response=
+				given()
+				.queryParam("client_id", "0531126e-272d-462a-b967-e25abdf45bbc")
+				.header("Origin","https://www.dummyapi.com")
+				.header("Content-Type","application/json")
+				.pathParam("id", CategoryID)
+				.when()
+				.get(Home_CLP_PLP_Search_Resource.categoryListsResource());
+		
+		statusCode=response.getStatusCode();
+		responseString=response.asString();
+		
+		if(statusCode==200) {
+			
+			/*
+			 * System.out.println("Category listed successfully");
+			 * System.out.println(responseString);
+			 */
+			 
+			log.info("Category listed successfully");
+			log.info(responseString);
+			Reporter.log("Category listed successfully");
+			Reporter.log(responseString);
+		}
+		
+		else{
+			log.error("Category listed failed");
+			log.error(responseString);
+			Reporter.log("Category listed failed",false);
+			Reporter.log(responseString,false);
+			Reporter.getCurrentTestResult();
+			Assert.fail("Test case fail");
+		}
+		
+	}
+	
+	
+	
 }

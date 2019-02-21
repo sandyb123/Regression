@@ -23,11 +23,11 @@ public class Fetchdata {
 		{
 			if(workbook.getSheetName(i).equalsIgnoreCase(sheetName))
 			{
-				System.out.println(workbook.getSheetName(i));
+				
 				XSSFSheet sheet=workbook.getSheetAt(i);
 				for(int j=0;j<=sheet.getLastRowNum();j++)
 				{
-					System.out.println(sheet.getLastRowNum());
+					
 					Row excelRows = sheet.getRow(j);
 					if(excelRows.getCell(0).getStringCellValue().equalsIgnoreCase(Scenario))
 					{
@@ -62,9 +62,7 @@ public class Fetchdata {
 				}
 			}
 		}
-		System.out.println("printing excel data");
-		System.out.println("aaa");
-		System.out.println(a);
+		
 		workbook.close();
 		return a;	
 		

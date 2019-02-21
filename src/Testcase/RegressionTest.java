@@ -25,9 +25,13 @@ public class RegressionTest extends BaseTest {
 		
 	}
 	
-	@Test
-	public void regression_Home_CLP_PLP_Search() throws IOException{
+	@Test (priority=2)
+	public void regression_Content() throws IOException{
 	Home_CLP_PLP_Search.contentMethod();
-	System.out.println("aaa");
-}
+	}
+	
+	@Test (priority=1)
+	public void regression_CategoryLists() throws IOException {
+		Home_CLP_PLP_Search.categoryLists();
+	}
 }

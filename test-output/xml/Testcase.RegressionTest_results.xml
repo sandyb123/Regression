@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="5.587">
+  <properties />
+  
+  
+            <testcase name="regression_Content" time="4.199" classname="Testcase.RegressionTest" />
+                <testcase name="regression_CategoryLists" time="1.388" classname="Testcase.RegressionTest" />
+      
+</testsuite>

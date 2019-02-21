@@ -32,23 +32,24 @@ public class BaseTest {
 	public static int statusCode;
 	public static String id;
 	public static Logger log=org.apache.logging.log4j.LogManager.getLogger(RegressionTest.class);
+	public static String res;
+	public static String CategoryID;
 	
 
 
 
 	
 
-public static  void Home_CLP_PLP_Search_data() throws IOException{
+	public static void Home_CLP_PLP_Search_data() throws IOException {
+
+		System.out.println("printing Home_CLP_PLP_Search_data() ");
+		ArrayList<String> data = Fetchdata.excelData("//src//data//data.xlsx", "Home_CLP_PLP_Search", "Scenario1");
+		id = data.get(1);
+		CategoryID=data.get(2);
+
+	}
 	
-	System.out.println("printing Home_CLP_PLP_Search_data() ");
-	ArrayList<String> data = Fetchdata.excelData("//src//data//data.xlsx", "Home_CLP_PLP_Search", "Scenario1");
-	id=data.get(1);
 	
-	System.out.println("abj");
-	
-	
-	
-}
 
 }
 
