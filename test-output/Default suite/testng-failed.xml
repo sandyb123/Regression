@@ -6,7 +6,7 @@
       <class name="Testcase.RegressionTest">
         <methods>
           <include name="hitClientResource"/>
-          <include name="regression_Home_CLP_PLP_Search"/>
+          <include name="regression_CategoryLists"/>
           <include name="getExcel"/>
         </methods>
       </class> <!-- Testcase.RegressionTest -->

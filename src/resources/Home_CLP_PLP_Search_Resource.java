@@ -10,7 +10,7 @@ public class Home_CLP_PLP_Search_Resource extends BaseTest {
 	}
 	
 	public static String categoryListsResource() {
-		 res = "/categories/({id}";
+		 res = "/categories/{id}";
 		 return res;
 	}
 

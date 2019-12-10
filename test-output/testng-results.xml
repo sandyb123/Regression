@@ -1,37 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="1" ignored="1" total="2" passed="0">
   <reporter-output>
     <line>
-      <![CDATA[Category listed failed]]>
+      <![CDATA[Auth creation failed]]>
     </line>
     <line>
-      <![CDATA[{"_v":"18.8","fault":{"arguments":{"categoryId":"(products","siteId":"AnastasiaUS"},"type":"CategoryNotFoundException","message":"No category with ID '(products' for site 'AnastasiaUS' was found."}}]]>
+      <![CDATA[{"_v":"18.8","fault":{"arguments":{"origin":"https://www.dummyapi.com"},"type":"UnauthorizedOriginException","message":"The origin 'https://www.dummyapi.com' is unauthorized."}}]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5054" started-at="2019-02-20T11:42:26Z" finished-at="2019-02-20T11:42:31Z">
+  <suite name="Suite" duration-ms="7205" started-at="2019-09-23T10:10:35Z" finished-at="2019-09-23T10:10:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5054" started-at="2019-02-20T11:42:26Z" finished-at="2019-02-20T11:42:31Z">
+    <test name="Test" duration-ms="7205" started-at="2019-09-23T10:10:35Z" finished-at="2019-09-23T10:10:42Z">
       <class name="Testcase.RegressionTest">
-        <test-method status="PASS" signature="getExcel()[pri:0, instance:Testcase.RegressionTest@4562e04d]" name="getExcel" is-config="true" duration-ms="12" started-at="2019-02-20T11:42:26Z" finished-at="2019-02-20T11:42:26Z">
+        <test-method status="PASS" signature="getExcel()[pri:0, instance:Testcase.RegressionTest@62e586a6]" name="getExcel" is-config="true" duration-ms="45" started-at="2019-09-23T10:10:35Z" finished-at="2019-09-23T10:10:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getExcel -->
-        <test-method status="PASS" signature="hitClientResource()[pri:0, instance:Testcase.RegressionTest@4562e04d]" name="hitClientResource" is-config="true" duration-ms="430" started-at="2019-02-20T11:42:26Z" finished-at="2019-02-20T11:42:26Z">
+        <test-method status="PASS" signature="hitClientResource()[pri:0, instance:Testcase.RegressionTest@62e586a6]" name="hitClientResource" is-config="true" duration-ms="886" started-at="2019-09-23T10:10:35Z" finished-at="2019-09-23T10:10:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- hitClientResource -->
-        <test-method status="PASS" signature="regression_CategoryLists()[pri:2, instance:Testcase.RegressionTest@4562e04d]" name="regression_CategoryLists" duration-ms="4576" started-at="2019-02-20T11:42:26Z" finished-at="2019-02-20T11:42:31Z">
+        <test-method status="FAIL" signature="regression_CategoryLists()[pri:1, instance:Testcase.RegressionTest@62e586a6]" name="regression_CategoryLists" duration-ms="6237" started-at="2019-09-23T10:10:36Z" finished-at="2019-09-23T10:10:42Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Test case fail]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Test case fail
+at org.testng.Assert.fail(Assert.java:96)
+at functaionalities.Cart.createAuth(Cart.java:52)
+at Testcase.RegressionTest.regression_CategoryLists(RegressionTest.java:38)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
             <line>
-              <![CDATA[Category listed failed]]>
+              <![CDATA[Auth creation failed]]>
             </line>
             <line>
-              <![CDATA[{"_v":"18.8","fault":{"arguments":{"categoryId":"(products","siteId":"AnastasiaUS"},"type":"CategoryNotFoundException","message":"No category with ID '(products' for site 'AnastasiaUS' was found."}}]]>
+              <![CDATA[{"_v":"18.8","fault":{"arguments":{"origin":"https://www.dummyapi.com"},"type":"UnauthorizedOriginException","message":"The origin 'https://www.dummyapi.com' is unauthorized."}}]]>
             </line>
           </reporter-output>
         </test-method> <!-- regression_CategoryLists -->
       </class> <!-- Testcase.RegressionTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

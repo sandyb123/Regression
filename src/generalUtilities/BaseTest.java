@@ -3,6 +3,7 @@ package generalUtilities;
 import java.io.FileInputStream;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.logging.LogManager;
 
 
@@ -11,8 +12,11 @@ import org.testng.annotations.BeforeTest;
 
 import Testcase.RegressionTest;
 import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import net.minidev.json.JSONObject;
+
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.NumberToTextConverter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -24,7 +28,7 @@ import java.util.Iterator;
 
 public class BaseTest {
 	
-	
+	public static JSONObject jsonObj = new JSONObject();
 	public static ArrayList<String> a;
 	public static Response response;
 	public static RequestSpecification request;
@@ -34,6 +38,13 @@ public class BaseTest {
 	public static Logger log=org.apache.logging.log4j.LogManager.getLogger(RegressionTest.class);
 	public static String res;
 	public static String CategoryID;
+	public static HashMap<String, Object>  map;
+	public static String auth;
+	public static String basketId;
+	public static String shippingAddress;
+	public static JsonPath jPath;
+	public static String etag;
+	
 	
 
 
