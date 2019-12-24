@@ -31,13 +31,13 @@ public class Checkout extends BaseTest {
 				.body("{\r\n" + 
 						"\"first_name\":\"John\",\r\n" + 
 						"\"last_name\":\"Smith\",\r\n" + 
-						"\"city\":\"Boston\",\r\n" + 
-						"\"country_code\":\"US\",\r\n" + 
-						"\"state_code\": \"Alaska\",\r\n" + 
-						"\"postal_code\":\"02101\",\r\n" + 
+						"\"city\":\"Addlestone\",\r\n" + 
+						"\"country_code\":\"GB\",\r\n" + 
+						"\"state_code\": \"Surrey\",\r\n" + 
+						"\"postal_code\":\"KT15 1AR\",\r\n" + 
 						"\"phone\":\"3333333333\",\r\n" + 
-						"\"address1\":\"1 Microsoft way\",\r\n" + 
-						"\"country_code\":\"US\"\r\n" + 
+						"\"address1\":\"1 Marley Close\",\r\n" + 
+						"\"country_code\":\"GB\"\r\n" + 
 						
 						"}")
 				.pathParam("basket_id", basketId)
@@ -78,7 +78,7 @@ public class Checkout extends BaseTest {
 				.header("Content-Type","application/json")
 				.header("Authorization",auth)
 				.body("{\r\n" + 
-						"  \"email\":\"valid@email.com\"\r\n" + 
+						"  \"email\":\"testLC1234@gmail.com\"\r\n" + 
 						"}")
 				.pathParam("basket_id", basketId)
 				.when()
@@ -107,7 +107,7 @@ public class Checkout extends BaseTest {
 }
 	public static void addShippingMethod() throws IOException {
 
-		
+		try {
 		System.out.println("add shipping method start");
 		response=
 				given()
@@ -127,7 +127,9 @@ public class Checkout extends BaseTest {
 		responseString=response.asString();
 		
 		if(statusCode==200) {
-							 
+			
+			OrderTotal = response.getBody().jsonPath().get("order_total");
+			//OrderTotal=Integer.parseInt(OTotal);
 			log.info("shipping method added successfully");
 			log.info(responseString);
 			Reporter.log("shipping method added successfully");
@@ -141,6 +143,12 @@ public class Checkout extends BaseTest {
 			Reporter.log(responseString,false);
 			Reporter.getCurrentTestResult();
 			Assert.fail("Test case fail");
+		}
+		
+		}
+		
+		catch (Exception e) {
+			System.out.println(e);
 		}
 }
 	
@@ -157,13 +165,15 @@ public class Checkout extends BaseTest {
 				.body("{\r\n" + 
 						"\"first_name\":\"John\",\r\n" + 
 						"\"last_name\":\"Smith\",\r\n" + 
-						"\"city\":\"Boston\",\r\n" + 
-						"\"country_code\":\"US\",\r\n" + 
-						"\"state_code\": \"Alaska\",\r\n" + 
-						"\"postal_code\":\"11122\",\r\n" + 
+						"\"city\":\"Addlestone\",\r\n" + 
+						"\"country_code\":\"GB\",\r\n" + 
+						"\"state_code\": \"Surrey\",\r\n" + 
+						"\"postal_code\":\"KT15 1AR\",\r\n" + 
 						"\"phone\":\"3333333333\",\r\n" + 
-						"\"address1\":\"1 Microsoft way\",\r\n" + 
-						"\"country_code\":\"US\"\r\n" + 
+						"\"address1\":\"1 Marley Close\",\r\n" + 
+						"\"country_code\":\"GB\"\r\n" + 
+						
+						
 						"}")
 				.pathParam("basket_id", basketId)
 				.when()
@@ -195,6 +205,7 @@ public class Checkout extends BaseTest {
 
 	
 		System.out.println("add payment start");
+		Checkout_Payloads.addressDetails();
 		response=
 				given()
 				.queryParam("client_id", "0531126e-272d-462a-b967-e25abdf45bbc")
@@ -202,14 +213,14 @@ public class Checkout extends BaseTest {
 				.header("Content-Type","application/json")
 				.header("Authorization",auth)
 				.body("{\r\n" + 
-						"  \"amount\" : 1.0,\r\n" + 
+						"  \"amount\" : "+OrderTotal+",\r\n" + 
 						"  \"payment_card\" : {\r\n" + 
 						"                     \"number\":\"411111111111111\",\r\n" + 
-						"                     \"security_code\":\"121\",\r\n" + 
-						"                     \"holder\":\"John Doe\",\r\n" + 
-						"                     \"card_type\":\"Visa\",\r\n" + 
-						"                     \"expiration_month\":1,\r\n" + 
-						"                     \"expiration_year\":2021\r\n" + 
+						"                     \"security_code\":\"737\",\r\n" + 
+						"                     \"holder\":\""+CardHolderName+"\",\r\n" + 
+						"                     \"card_type\":\"visa\",\r\n" + 
+						"                     \"expiration_month\":10,\r\n" + 
+						"                     \"expiration_year\":2020\r\n" + 
 						"                    },\r\n" + 
 						"  \"payment_method_id\" : \"CREDIT_CARD\"\r\n" + 
 						"}")
@@ -245,6 +256,11 @@ public class Checkout extends BaseTest {
 		System.out.println("place order start");
 		JSONObject abc = new JSONObject();
 		
+		
+		try {
+			
+			System.out.println("Auth="+auth);
+		
 		response=
 				given()
 				.queryParam("client_id", "0531126e-272d-462a-b967-e25abdf45bbc")
@@ -260,12 +276,15 @@ public class Checkout extends BaseTest {
 		responseString=response.asString();
 		
 		if(statusCode==200) {
-							 
+			 orderID = response.getBody().jsonPath().get("order_no");			 
 			log.info("Order placed successfully");
 			log.info(responseString);
 			Reporter.log("Order placed  successfully");
+			Reporter.log(orderID);
+			System.out.println(orderID);
 			Reporter.log(responseString);
 		}
+		
 		
 		else{
 			log.error("Order placement failed");
@@ -275,5 +294,66 @@ public class Checkout extends BaseTest {
 			Reporter.getCurrentTestResult();
 			Assert.fail("Test case fail");
 		}
+		
+		}
+		catch (Exception e) {
+			System.out.println("error message" + e);
+		}
+}
+	
+public static void updateOrder() throws IOException {
+
+		
+		System.out.println("Update order start");
+		System.out.println("Auth="+auth);
+		JSONObject abc = new JSONObject();
+		
+		
+		
+		
+		response=
+				given()
+				.queryParam("client_id", "0531126e-272d-462a-b967-e25abdf45bbc")
+				.header("Origin","https://www.dummyapi.com")
+				.header("Content-Type","application/json")
+				.header("Authorization",auth)
+				.body(Checkout_Payloads.orderstatus())
+				.pathParam("orderID", orderID)
+				.when()
+				.patch(Checkout_Resource.updateOrderResource());
+		responseString=response.asString();
+		 jPath = new JsonPath(responseString);
+		statusCode=response.getStatusCode();
+		responseString=response.asString();
+		
+		if(statusCode==200) {
+			
+			try {
+			
+			 orderIDUpdated = response.getBody().jsonPath().get("order_no");			 
+			log.info("Order update successfully");
+			log.info(responseString);
+			Reporter.log("Order update  successfully");
+			Reporter.log(orderIDUpdated);
+			System.out.println(orderIDUpdated);
+			Reporter.log(responseString);
+			
+			}
+			
+			catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
 }
 }

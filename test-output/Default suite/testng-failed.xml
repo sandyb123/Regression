@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Testcase.RegressionTest">
+      <class name="functaionalities.adyen">
         <methods>
-          <include name="hitClientResource"/>
-          <include name="regression_CategoryLists"/>
-          <include name="getExcel"/>
+          <include name="linkOrderToAdyen"/>
+          <include name="hitAdyen"/>
         </methods>
-      </class> <!-- Testcase.RegressionTest -->
+      </class> <!-- functaionalities.adyen -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

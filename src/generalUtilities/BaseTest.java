@@ -43,7 +43,8 @@ public class BaseTest {
 	public static String basketId;
 	public static String shippingAddress;
 	public static JsonPath jPath;
-	public static String etag;
+	public static String etag, returnBody, firstname, lastname, city,countrycode,statecode,postalcode,houseNumberOrName,street,phone,orderID,adyenBody, encryptedCardNumber, encryptedExpiryMonth, encryptedExpiryYear, encryptedSecurityCode,email,CardHolderName,oStatus,orderIDUpdated;
+	public static float OrderTotal;
 	
 	
 

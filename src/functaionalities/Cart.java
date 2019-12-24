@@ -102,7 +102,7 @@ public class Cart extends BaseTest {
 				.header("Content-Type","application/json")
 				.header("Authorization",auth)
 				.body("[{\r\n" + 
-						"  \"product_id\" : \"ABH01-32198\",\r\n" + 
+						"  \"product_id\" : \"16724\",\r\n" + 
 						"  \"quantity\" : 2\r\n" + 
 						"}]")
 				.pathParam("basket_id", basketId)

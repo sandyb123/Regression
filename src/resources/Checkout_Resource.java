@@ -28,6 +28,11 @@ public class Checkout_Resource extends BaseTest{
 		return res;
 	}
 	
+	public static String updateOrderResource() {
+		res="/orders/{orderID}";
+		return res;
+	}
+	
 	public static String addEmailResource()
 	{
 		String res = "/baskets/{basket_id}/customer";
